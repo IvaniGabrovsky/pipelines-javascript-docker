@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ivanigabrovskypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ivanigabrovskypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ivanigabrovskypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ivanigabrovskypipelinesjavascriptdocker 
+          image: ivancontainerregistry.azurecr.io/ivanigabrovskypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
